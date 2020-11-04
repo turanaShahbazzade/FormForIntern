@@ -1,0 +1,23 @@
+.form-text {
+  padding-top: 50px;
+}
+
+.form-text h3 {
+  font-style: italic;
+  color: blue;
+}
+
+.laptop {
+  border: 1px solid transparent;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.15);
+  position: absolute;
+  width: 100%;
+}
+
+.btn {
+  position: absolute;
+  bottom: -300px;
+}
+/*# sourceMappingURL=style.css.map */

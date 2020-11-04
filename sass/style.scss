@@ -1,0 +1,20 @@
+.form-text {
+  padding-top: 50px;
+  h3 {
+    font-style: italic;
+    color: blue;
+  }
+}
+.laptop{
+    //background: cadetblue none repeat scroll 0 0;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.15);
+    position:absolute;
+    width: 100%;
+}
+
+.btn{
+    position: absolute;
+    bottom: -300px;
+}
