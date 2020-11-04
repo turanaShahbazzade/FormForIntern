@@ -10,7 +10,7 @@ submit.addEventListener("click", function(e){
 product.forEach((item) =>{
     item.addEventListener("click", function(){
 
-        if(item.innerHTML=="Laptops"){
+        if(item.value=="Laptops"){
             laptop.classList.remove("d-none");
             laptop.classList.add("d-block");
         }
