@@ -9,32 +9,26 @@ function showTheSelectedPro() {
   
    document.getElementById(valOfSelect).style.display="block";
    
-}
+};
 
 let submitBtn = document.querySelector(".btn");
 let myForm = document.querySelector(".register");
-let catagories = document.querySelector("#catagories")
+let catagories = document.querySelector("#catagories");
 
 // var laptop = document.getElementById("catagories").options.item(1);
 // var mobile = document.getElementById("catagories").options.item(2);
 // var headphone = document.getElementById("catagories").options.item(3);
 
-myForm.addEventListener("submit", function(e){
+myForm.addEventListener("submit", function(e){ 
     let select = document.getElementById("catagories");
-    select.addEventListener("blur", function(){
-        if(this.value!="Laptops" || this.value !="Mobile Phones" || this.value !="Headphones"){
-            select.style.borderColor="red"
-        }
-         
+        console.log(select.value);
+        if(select.value !=="laptops" || select.value !=="mobile" || select.value !=="headphones"){
+            select.style.borderColor="red";
+            console.log("if");
+        }    
    else{
     e.preventDefault();
    }
-    
-    })
-
-    
-  
-})
-
-
+    });
+   
 
