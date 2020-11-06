@@ -7,13 +7,10 @@
   color: blue;
 }
 
-.laptop {
-  border: 1px solid transparent;
-  border-radius: 2px;
-  -webkit-box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.15);
+.product {
   position: absolute;
   width: 100%;
+  display: none;
 }
 
 .btn {

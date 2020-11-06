@@ -22,22 +22,22 @@
             </div>
           </div>
           <div class="col-lg-4 position-relative">
-            <form action="" class="position-relative">
+            <form action="" class=" register position-relative">
               <label for="company">Product Catagories</label>
-              <select class="form-control form-control-lg">
+              <select id="catagories" class="form-control  form-control-lg" onchange="showTheSelectedPro()" >
                 <option>Add a product</option>
-                <option value="Laptops" class="product">Laptops </option>
-                <option value="Mobile" class="product">Mobile Phones</option>
-                <option value="Headphones" class="product">Headphones</option>
+                <option value="laptops" >Laptops </option>
+                <option value="mobile" >Mobile Phones</option>
+                <option value="headphones" >Headphones</option>
               </select>
 
-              <div class="laptop mt-5 d-none">
+              <div id="laptops" class=" product mt-5  ">
                 <b>Please Fill the gaps for Laptop</b>
                 <select class="form-control form-control-lg mt-2">
                   <option>Choose the model</option>
                   <option>HP</option>
                   <option>ASUS</option>
-                  <option>MAC BOOK</option>
+                  <option>MAC BOOK</option> 
                 </select>
                 <select class="form-control form-control-lg mt-2">
                   <option >Choose the price</option>
@@ -47,7 +47,7 @@
                 </select>
                 
               </div>
-              <!-- <div class="laptop mt-5 d-none">
+              <div id="mobile" class="product mt-5  ">
                 <b>Please Fill the gaps for Mobile </b>
                 <select class="form-control form-control-lg mt-2">
                   <option>Choose the model</option>
@@ -63,7 +63,24 @@
                 </select>
 
                 
-              </div> -->
+              </div>
+              <div id="headphones" class="product mt-5 ">
+                <b>Please Fill the gaps for Headohone </b>
+                <select class="form-control form-control-lg mt-2">
+                  <option>Choose the model</option>
+                  <option>Samsung</option>
+                  <option>iPHONE</option>
+                  <option>Matarola</option>
+                </select>
+                <select class="form-control form-control-lg mt-2">
+                  <option>Choose the price</option>
+                  <option>500-700</option>
+                  <option>800-1500</option>
+                  <option>2000-3500</option>
+                </select>
+
+                
+              </div>
 
             <button class="btn btn-primary" type="submit">Submit form</button>
             </form>

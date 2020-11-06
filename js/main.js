@@ -1,24 +1,40 @@
 
+function showTheSelectedPro() {
+    let valOfSelect = document.getElementById("catagories").value;
+    let choosenProducts = document.getElementsByClassName("product");
+   for(i=0; i<choosenProducts.length; i++){
+       choosenProducts[i].style.display="none";
 
-let product = document.querySelectorAll(".product");
-let laptop = document.querySelector(".laptop");
-let submit = document.querySelector(".btn");
-submit.addEventListener("click", function(e){
+   }
+  
+   document.getElementById(valOfSelect).style.display="block";
+   
+}
+
+let submitBtn = document.querySelector(".btn");
+let myForm = document.querySelector(".register");
+let catagories = document.querySelector("#catagories")
+
+// var laptop = document.getElementById("catagories").options.item(1);
+// var mobile = document.getElementById("catagories").options.item(2);
+// var headphone = document.getElementById("catagories").options.item(3);
+
+myForm.addEventListener("submit", function(e){
+    let select = document.getElementById("catagories");
+    select.addEventListener("blur", function(){
+        if(this.value!="Laptops" || this.value !="Mobile Phones" || this.value !="Headphones"){
+            select.style.borderColor="red"
+        }
+         
+   else{
     e.preventDefault();
-
-});
-product.forEach((item) =>{
-    item.addEventListener("click", function(){
-
-        if(item.value=="Laptops"){
-            laptop.classList.remove("d-none");
-            laptop.classList.add("d-block");
-        }
-        else{
-            laptop.classList.remove("d-block");
-            laptop.classList.add("d-none");
-        }
+   }
+    
     })
-});
+
+    
+  
+})
+
 
 
