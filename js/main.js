@@ -1,11 +1,11 @@
 function showTheSelectedPro() {
-  let valOfSelect = document.getElementById("catagories").value;
+  let catagories = document.getElementById("catagories").value;
   let choosenProducts = document.getElementsByClassName("product");
   for (i = 0; i < choosenProducts.length; i++) {
     choosenProducts[i].style.display = "none";
   }
 
-  document.getElementById(valOfSelect).style.display = "block";
+  document.getElementById(catagories).style.display = "block";
 }
 let laptops = document.querySelector(".laptops");
 let submitBtn = document.querySelector(".btn");
@@ -64,32 +64,27 @@ myForm.addEventListener("submit", function (e) {
     phoneModel.style.borderColor = "green";
     console.log("if 5");
   }
+  catagories.addEventListener("change", function () {
+    if (
+      this.value !== "laptops" &&
+      this.value !== "mobile" &&
+      this.value == "proAdd"
+    ) {
+      catagories.style.borderColor = "red";
+    } else {
+      catagories.style.borderColor = "green";
+      catagories.previousElementSibling.style.color = "black";
+      label.firstElementChild.innerText = " ";
+    }
+  });
 
-  phoneModel.addEventListener("change", function () {
-    if (this.value !== "model" && this.value !== "modelAdd") {
-      phoneModel.style.borderColor = "red";
-    } else {
-      phoneModel.style.borderColor = "green";
-      phoneModel.previousElementSibling.style.color = "black";
-      inputForMobile.firstElementChild.innerHTML=" ";
-    }
-  });
-  phonePrice.addEventListener("change", function () {
-    if (this.value !== "price" && this.value !== "addPrice") {
-      phonePrice.style.borderColor = "red";
-    } else {
-      phonePrice.style.borderColor = "green";
-      phoneModel.previousElementSibling.style.color = "black";
-      inputForMobile.firstElementChild.innerHTML=" ";
-    }
-  });
   compPrice.addEventListener("change", function () {
-    if (this.value !== "price" && this.value !== "priceAdd") {
+    if (this.value !== "price" && this.value == "priceAdd") {
       compPrice.style.borderColor = "red";
     } else {
       compPrice.style.borderColor = "green";
       compModel.previousElementSibling.style.color = "black";
-      inputForLaptop.firstElementChild.innerHTML=" ";
+      inputForLaptop.firstElementChild.innerText = " ";
     }
   });
 
@@ -98,28 +93,33 @@ myForm.addEventListener("submit", function (e) {
       this.value !== "hp" &&
       this.value !== "asus" &&
       this.value !== "mac" &&
-      this.value !== "modelAdd"
+      this.value == "modelAdd"
     ) {
       compModel.style.borderColor = "red";
+      inputForLaptop.firstElementChild.innerText = "Please Choose A a model ";
     } else {
       compModel.style.borderColor = "green";
       compModel.previousElementSibling.style.color = "black";
-      inputForLaptop.firstElementChild.innerHTML()=" ";
+      inputForLaptop.firstElementChild.innerText = " ";
     }
   });
-
-  catagories.addEventListener("change", function () {
-    if (
-      this.value !== "laptops" &&
-      this.value !== "headphones" &&
-      this.value !== "mobile" &&
-      this.value !== "proAdd"
-    ) {
-      catagories.style.borderColor = "red";
+  phoneModel.addEventListener("change", function () {
+    if (this.value !== "model" && this.value == "modelAdd") {
+      phoneModel.style.borderColor = "red";
     } else {
-      catagories.style.borderColor = "green";
-      catagories.previousElementSibling.style.color = "black";
-      label.firstElementChild.innerHTML=" ";
+      phoneModel.style.borderColor = "green";
+      phoneModel.previousElementSibling.style.color = "black";
+      inputForMobile.firstElementChild.innerText = " ";
     }
   });
+  phonePrice.addEventListener("change", function () {
+    if (this.value !== "price" && this.value == "addPrice") {
+      phonePrice.style.borderColor = "red";
+    } else {
+      phonePrice.style.borderColor = "green";
+      phoneModel.previousElementSibling.style.color = "black";
+      inputForMobile.firstElementChild.innerText = " ";
+    }
+  });
+  
 });
