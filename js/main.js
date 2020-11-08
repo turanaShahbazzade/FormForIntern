@@ -1,14 +1,14 @@
 function showTheSelectedPro() {
-  let catagories = document.getElementById("catagories").value;
+  let catagoriesValue = document.getElementById("catagories").value;
   let choosenProducts = document.getElementsByClassName("product");
   for (i = 0; i < choosenProducts.length; i++) {
     choosenProducts[i].style.display = "none";
   }
-
-  document.getElementById(catagories).style.display = "block";
+  if (catagoriesValue != "proAdd") {
+    document.getElementById(catagoriesValue).style.display = "block";
+  }
 }
-let laptops = document.querySelector(".laptops");
-let submitBtn = document.querySelector(".btn");
+let laptops = document.querySelector(".laptops"); 
 let myForm = document.querySelector(".register");
 let catagories = document.getElementById("catagories");
 let label = document.querySelector(".label");
@@ -74,20 +74,9 @@ myForm.addEventListener("submit", function (e) {
     } else {
       catagories.style.borderColor = "green";
       catagories.previousElementSibling.style.color = "black";
-      label.firstElementChild.innerText = " ";
+      alertForCatagories.innerText = " ";
     }
   });
-
-  compPrice.addEventListener("change", function () {
-    if (this.value !== "price" && this.value == "priceAdd") {
-      compPrice.style.borderColor = "red";
-    } else {
-      compPrice.style.borderColor = "green";
-      compModel.previousElementSibling.style.color = "black";
-      inputForLaptop.firstElementChild.innerText = " ";
-    }
-  });
-
   compModel.addEventListener("change", function () {
     if (
       this.value !== "hp" &&
@@ -96,20 +85,31 @@ myForm.addEventListener("submit", function (e) {
       this.value == "modelAdd"
     ) {
       compModel.style.borderColor = "red";
-      inputForLaptop.firstElementChild.innerText = "Please Choose A a model ";
+     
     } else {
       compModel.style.borderColor = "green";
       compModel.previousElementSibling.style.color = "black";
-      inputForLaptop.firstElementChild.innerText = " ";
+      alertForCatagories.innerText = " ";
     }
   });
+  compPrice.addEventListener("change", function () {
+    if (this.value !== "price" && this.value == "priceAdd") {
+      compPrice.style.borderColor = "red";
+    } else {
+      compPrice.style.borderColor = "green";
+      compModel.previousElementSibling.style.color = "black";
+      alertForCatagories.innerText = " ";
+    }
+  });
+
+ 
   phoneModel.addEventListener("change", function () {
     if (this.value !== "model" && this.value == "modelAdd") {
       phoneModel.style.borderColor = "red";
     } else {
       phoneModel.style.borderColor = "green";
       phoneModel.previousElementSibling.style.color = "black";
-      inputForMobile.firstElementChild.innerText = " ";
+      alertForCatagories.innerText = " ";
     }
   });
   phonePrice.addEventListener("change", function () {
@@ -118,8 +118,7 @@ myForm.addEventListener("submit", function (e) {
     } else {
       phonePrice.style.borderColor = "green";
       phoneModel.previousElementSibling.style.color = "black";
-      inputForMobile.firstElementChild.innerText = " ";
+      alertForCatagories.innerText = " ";
     }
   });
-  
 });
