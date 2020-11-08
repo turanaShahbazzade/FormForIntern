@@ -18,54 +18,57 @@ let compPrice = document.querySelector(".comp-price");
 let phoneModel = document.querySelector(".phone-model");
 let phonePrice = document.querySelector(".phone-price");
 let inputForMobile =document.querySelector(".inputForMobile");
+let alertForCatagories = document.createElement("p");
 myForm.addEventListener("submit", function (e) {
- 
+
+  alertForCatagories.innerText = " ";
+
   if (catagories.value == "proAdd"  ) {
     catagories.style.borderColor = "red";
     catagories.previousElementSibling.style.color = "red";
-    let alertForCatagories = document.createElement("p");
+   
     alertForCatagories.innerText = "You have to choose product!";
     label.append(alertForCatagories);
+    
+
     console.log("if 1");
-    e.preventDefault();
+   
    
   } else if (compModel.value == "modelAdd" && catagories.value=="laptops" ) {
     compModel.style.borderColor = "red";
     compModel.previousElementSibling.style.color = "red";
-    let alertForCatagories = document.createElement("p");
     alertForCatagories.innerText = "You have to choose computer model!";
     inputForLaptop.append(alertForCatagories);
     console.log("if 2");
-    e.preventDefault();
+
   
   } else if (compPrice.value == "priceAdd" && catagories.value=="laptops") {
     compPrice.style.borderColor = "red";
-    let alertForCatagories = document.createElement("p");
+  
     alertForCatagories.innerText = "You have to choose price!";
     alertForCatagories.style.color = "red";
     inputForLaptop.append(alertForCatagories);
     console.log("if 3");
-    e.preventDefault();
+    
   
   } 
   else  if(phoneModel.value=="modelAdd" && catagories.value=="mobile"){
       phoneModel.style.borderColor ="red";
       phoneModel.previousElementSibling.style.color="red";
-      let alertForCatagories = document.createElement("p");
       alertForCatagories.innerText = "You have to choose phone model!";
       inputForMobile.append(alertForCatagories);
       console.log("if 4");
-      e.preventDefault();
+    
 
   }
   else  if(phonePrice.value=="addPrice" && catagories.value=="mobile"){
     phonePrice.style.borderColor ="red";
     phoneModel.previousElementSibling.style.color="red";
-    let alertForCatagories = document.createElement("p");
+  
     alertForCatagories.innerText = "You have to choose phone price!";
     inputForMobile.append(alertForCatagories);
     console.log("if 4");
-    e.preventDefault();
+    
 
 }
   else {
