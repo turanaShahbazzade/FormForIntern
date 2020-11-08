@@ -22,88 +22,74 @@
             </div>
           </div>
           <div class="col-lg-4 position-relative">
-            <form action="" class=" register position-relative">
-              <label for="company">Product Catagories</label>
-              <select id="catagories" class="form-control  form-control-lg" onchange="showTheSelectedPro()" >
-                <option>Add a product</option>
-                <option value="laptops" >Laptops </option>
-                <option value="mobile" >Mobile Phones</option>
-                <option value="headphones" >Headphones</option>
+            <form action="" class="register position-relative">
+              <label class="label" for="company">Product Catagories</label>
+              <select
+                id="catagories"
+                class="form-control form-control-lg"
+                onchange="showTheSelectedPro()"
+              >
+                <option value="proAdd">Add a product</option>
+                <option value="laptops">Laptops</option>
+                <option value="mobile">Mobile Phones</option>
+                <option value="headphones">Headphones</option>
               </select>
-
-              <div id="laptops" class=" product mt-5  ">
-                <b>Please Fill the gaps for Laptop</b>
-                <select class="form-control form-control-lg mt-2">
-                  <option>Choose the model</option>
-                  <option>HP</option>
-                  <option>ASUS</option>
-                  <option>MAC BOOK</option> 
+              <!-- ****Till Here I am done**** -->
+              <div id="laptops" class="product mt-5">
+                <b class="inputForLaptop">Please Fill the gaps for Laptop</b>
+                <select class="comp-model form-control form-control-lg mt-2">
+                  <option value="modelAdd">Choose the model</option>
+                  <option value="hp">HP</option>
+                  <option value="asus">ASUS</option>
+                  <option value="mac">MAC BOOK</option>
                 </select>
-                <select class="form-control form-control-lg mt-2">
-                  <option >Choose the price</option>
-                  <option>500-700</option>
-                  <option>800-1500</option>
-                  <option>2000-3500</option>
+                <!--***Till Here I am done***  -->
+                <select class="comp-price form-control form-control-lg mt-2">
+                  <option value="priceAdd">Choose the price</option>
+                  <option value="price">500-700</option>
+                  <option value="price">800-1500</option>
+                  <option value="price">2000-3500</option>
                 </select>
-                
+                <!-- ***Till here I am done*** -->
               </div>
-              <div id="mobile" class="product mt-5  ">
-                <b>Please Fill the gaps for Mobile </b>
-                <select class="form-control form-control-lg mt-2">
-                  <option>Choose the model</option>
-                  <option>Samsung</option>
-                  <option>iPHONE</option>
-                  <option>Matarola</option>
+              <div id="mobile" class="product mt-5">
+                <b class="inputForMobile">Please Fill the gaps for Mobile </b>
+                <select class="phone-model form-control form-control-lg mt-2">
+                  <option value="modelAdd">Choose the model</option>
+                  <option value="model">Samsung</option>
+                  <option value="model">iPHONE</option>
+                  <option value="model">Redmi</option>
                 </select>
-                <select class="form-control form-control-lg mt-2">
-                  <option>Choose the price</option>
-                  <option>500-700</option>
-                  <option>800-1500</option>
-                  <option>2000-3500</option>
+                <select class="phone-price form-control form-control-lg mt-2">
+                  <option value="addPrice">Choose the price</option>
+                  <option value="price">500-700</option>
+                  <option value="price">800-1500</option>
+                  <option value="price">2000-3500</option>
                 </select>
-
-                
               </div>
-              <div id="headphones" class="product mt-5 ">
+              <div id="headphones" class="product mt-5">
                 <b>Please Fill the gaps for Headohone </b>
-                <select class="form-control form-control-lg mt-2">
-                  <option>Choose the model</option>
-                  <option>Samsung</option>
-                  <option>iPHONE</option>
-                  <option>Matarola</option>
+                <select
+                  class="headphone-model form-control form-control-lg mt-2"
+                >
+                  <option value="modelAdd">Choose the model</option>
+                  <option value="samsung">Samsung</option>
+                  <option value="iphone">iPHONE</option>
+                  <option value="redmi">Redmi</option>
                 </select>
-                <select class="form-control form-control-lg mt-2">
-                  <option>Choose the price</option>
-                  <option>500-700</option>
-                  <option>800-1500</option>
-                  <option>2000-3500</option>
+                <select
+                  class="headphone-price form-control form-control-lg mt-2"
+                >
+                  <option value="price">Choose the price</option>
+                  <option value="price">500-700</option>
+                  <option value="price">800-1500</option>
+                  <option value="price">2000-3500</option>
                 </select>
-
-                
               </div>
 
-            <button class="btn btn-primary" type="submit">Submit form</button>
+              <button class="btn btn-primary" type="submit">Submit form</button>
             </form>
           </div>
-          <!-- <div class="col-lg-4">
-            <label for="company">Product Catagories</label>
-            <select class="form-control form-control-lg">
-              <option>Add a product</option>
-              <option>Laptops</option>
-              <option>Mobile Phones</option>
-              <option>Headphones</option>
-            </select>
-            
-          </div> -->
-          <!-- <div class="col-lg-4">
-            <label for="company">Product Catagories</label>
-            <select class="form-control form-control-lg">
-              <option>Add a product</option>
-              <option>Laptops</option>
-              <option>Mobile Phones</option>
-              <option>Headphones</option>
-            </select>
-          </div> -->
         </div>
       </div>
     </main>
