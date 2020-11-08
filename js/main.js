@@ -48,7 +48,7 @@ myForm.addEventListener("submit", function (e) {
     e.preventDefault();
   
   } 
-  else  if(phoneModel.value=="modelAdd"){
+  else  if(phoneModel.value=="modelAdd" && catagories.value=="mobile"){
       phoneModel.style.borderColor ="red";
       phoneModel.previousElementSibling.style.color="red";
       let alertForCatagories = document.createElement("p");
@@ -58,7 +58,7 @@ myForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
   }
-  else  if(phonePrice.value=="addPrice"){
+  else  if(phonePrice.value=="addPrice" && catagories.value=="mobile"){
     phonePrice.style.borderColor ="red";
     phoneModel.previousElementSibling.style.color="red";
     let alertForCatagories = document.createElement("p");
